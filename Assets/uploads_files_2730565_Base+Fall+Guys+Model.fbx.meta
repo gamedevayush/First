@@ -1,0 +1,876 @@
+fileFormatVersion: 2
+guid: bed2cdad88cf0cc45862a15db0796f52
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CH_FallGuy_MAT
+    second: {fileID: 2100000, guid: e103825e505542d4b9ba97a4b27d72f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d1199b106a32e11489caf9a84cd363f1, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'Ball_L_jnt'
+      : rotation error = 0.456170 deg\n\t'Ball_R_jnt' : rotation error = 5.199794
+      deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Root|Root|ArmWave_End|Base Layer' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has translation animation
+      that will be discarded.\n\t'Shoulder_L_jnt' has translation animation that
+      will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|ArmWave_Loop|Base Layer' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Shoulder_L_jnt' has translation animation that will
+      be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|ArmWave_Start|Base Layer' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Shoulder_L_jnt' has translation animation that will
+      be discarded.\n\t'Shoulder_R_jnt1' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|CH_Fallguy_FG_emote_HappyClap|Base Layer' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest_C_jnt' has translation animation
+      that will be discarded.\n\t'Head_C_jnt01' has scale animation that will be
+      discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|CH_Fallguy_FG_Emote_Mexwave|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Beefcake_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Eye_L_jnt' has scale
+      animation that will be discarded.\n\t'Eye_R_jnt' has scale animation that will
+      be discarded.\n\t'Shoulder_L_jnt' has translation animation that will be discarded.\n\t'Shoulder_R_jnt1'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_CostumeChangeLooking_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|FG_Emote_Armthrow_A|Base Layer' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Chest_C_jnt' has translation animation
+      that will be discarded.\n\t'Head_C_jnt01' has translation animation that will
+      be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_Chicken_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_Neener_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_Pattycake_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_PirateDance_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_RobotDance_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Finger01_R_jnt_04' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_slowclap_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Eye_L_jnt' has scale animation that will
+      be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Finger01_R_jnt_04' has translation
+      animation that will be discarded.\n\t'Finger02_R_jnt_04' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_ThumbsUp_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Head_C_jnt01' has scale animation that
+      will be discarded.\n\t'Eye_L_jnt' has scale animation that will be discarded.\n\t'Eye_R_jnt'
+      has scale animation that will be discarded.\n\t'Shoulder_L_jnt' has translation
+      animation that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation
+      that will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|FG_Emote_Wave_A|Base Layer' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Chest_C_jnt' has translation animation that will be
+      discarded.\n\t'Head_C_jnt01' has translation animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_WaveOverHead_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest_C_jnt'
+      has translation animation that will be discarded.\n\t'Head_C_jnt01' has translation
+      animation that will be discarded.\n\t'Shoulder_L_jnt' has translation animation
+      that will be discarded.\n\t'Shoulder_R_jnt1' has translation animation that
+      will be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be
+      discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Emote_Zsnap_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Head_C_jnt01'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|FG_Idle_A|Base Layer' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\t'Hip_L_jnt' has translation animation
+      that will be discarded.\n\t'Hip_R_jnt' has translation animation that will
+      be discarded.\n\nClip 'Root|Root|FG_Idle_Joggingonspot|Base Layer' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Eye_L_jnt' has scale animation
+      that will be discarded.\n\t'Eye_R_jnt' has scale animation that will be discarded.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Idle_TouchingToes|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Shoulder_L_jnt'
+      has translation animation that will be discarded.\n\t'Shoulder_R_jnt1' has
+      translation animation that will be discarded.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Hip_R_jnt' has translation animation
+      that will be discarded.\n\nClip 'Root|Root|FG_Walk_A|Base Layer' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt' has translation
+      animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_L_jnt' has translation
+      animation that will be discarded.\n\t'Ball_L_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Hip_R_jnt' has translation
+      animation that will be discarded.\n\t'Ball_R_jnt' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\nClip 'Root|Root|FG_Walk_Left_A|Base
+      Layer' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Pelvis_C_jnt'
+      has translation animation that will be discarded.\n\t'Pelvis_C_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Root|Root|FG_Walk_Right_A|Base Layer' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Shoulder_R_jnt1' has translation animation that will
+      be discarded.\n\t'Pelvis_C_jnt' has translation animation that will be discarded.\n\t'Pelvis_C_jnt'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L_jnt'
+      has translation animation that will be discarded.\n\t'Ball_L_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_R_jnt'
+      has translation animation that will be discarded.\n\t'Ball_R_jnt' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Torso_C_jnt_NoStrechSquash
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_L_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_R_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_L_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_R_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_L_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_R_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest_C_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_C_jnt01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_L_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_R_jnt1
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_L_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_R_jnt1
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_L_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_R_jnt1
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_L_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toe_R_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eye_L_jnt
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Eye_R_jnt
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_L_jnt_01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_L_jnt_02
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_L_jnt_01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_L_jnt_02
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_L_jnt_01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_L_jnt_02
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_R_jnt_03
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Thumb_R_jnt_04
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_R_jnt_03
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger01_R_jnt_04
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_R_jnt_03
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Finger02_R_jnt_04
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: uploads_files_2730565_Base+Fall+Guys+Model(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: uploads_files_2730565_Base+Fall+Guys+Model(Clone)
+      position: {x: -0, y: 0.000000076233256, z: 0.46791637}
+      rotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Torso_C_jnt_NoStrechSquash
+      parentName: Root
+      position: {x: 0.00046978335, y: 0.0066391123, z: -0.004433146}
+      rotation: {x: -0, y: -2.2737371e-11, z: 3.1832317e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -5.043148e-11, y: 0.002873458, z: -2.3246684e-11}
+      rotation: {x: -0.000000005820766, y: -2.273736e-11, z: -3.9221962e-10, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Head_C_jnt01
+      parentName: Chest_C_jnt
+      position: {x: -6.350092e-11, y: 0.0011034837, z: 0.0006017439}
+      rotation: {x: -0.007696825, y: -2.936817e-10, z: -0.0000000032026397, w: 0.9999704}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: Eye_L_jnt
+      parentName: Head_C_jnt01
+      position: {x: -0.001200823, y: 0.0023191625, z: 0.0038296792}
+      rotation: {x: 0.7125285, y: 0.0000000014716842, z: 9.760209e-10, w: 0.70164317}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Eye_L_jnt_end
+      parentName: Eye_L_jnt
+      position: {x: -0, y: 0.0046331156, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eye_R_jnt
+      parentName: Head_C_jnt01
+      position: {x: 0.0012008232, y: 0.0023191592, z: 0.0038296795}
+      rotation: {x: 0.7071069, y: -0.0000000820938, z: -0.00000008204798, w: 0.70710677}
+      scale: {x: 1, y: 0.99999976, z: 0.9999997}
+    - name: Eye_R_jnt_end
+      parentName: Eye_R_jnt
+      position: {x: -0, y: 0.004633115, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_L_jnt
+      parentName: Chest_C_jnt
+      position: {x: -0.0048635695, y: 0.0011878776, z: 0.00073775125}
+      rotation: {x: -0.49908328, y: 0.5011067, z: 0.4955216, w: 0.50424826}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: Elbow_L_jnt
+      parentName: Shoulder_L_jnt
+      position: {x: 5.2154064e-10, y: 0.0034572138, z: 0}
+      rotation: {x: 0.026139777, y: 0.002651423, z: 0.015847577, w: 0.9995291}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: Wrist_L_jnt
+      parentName: Elbow_L_jnt
+      position: {x: -1.4624675e-11, y: 0.0027322501, z: 0.0000000011920929}
+      rotation: {x: -0.026797418, y: 0.006008135, z: -0.027227918, w: 0.999252}
+      scale: {x: 0.9999999, y: 1.0000006, z: 1.0000002}
+    - name: Finger01_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: -0.0008042301, y: 0.0026761508, z: 0.00027519616}
+      rotation: {x: -0.0051918165, y: -0.032518093, z: 0.060535647, w: 0.9976227}
+      scale: {x: 0.9999998, y: 0.9999996, z: 1.0000005}
+    - name: Finger01_L_jnt_02
+      parentName: Finger01_L_jnt_01
+      position: {x: -2.9802322e-10, y: 0.0006452233, z: -0.0000000012060627}
+      rotation: {x: -0.039602645, y: 0.0273836, z: -0.0051159305, w: 0.99882716}
+      scale: {x: 0.99999976, y: 1.0000002, z: 0.99999964}
+    - name: Finger01_L_jnt_02_end
+      parentName: Finger01_L_jnt_02
+      position: {x: -0, y: 0.0006452236, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger02_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: 0.0009785808, y: 0.002411367, z: 0.000062627485}
+      rotation: {x: 0.012138315, y: -0.08970214, z: 0.068427816, w: -0.9935411}
+      scale: {x: 0.9999995, y: 0.9999993, z: 1.0000004}
+    - name: Finger02_L_jnt_02
+      parentName: Finger02_L_jnt_01
+      position: {x: 0.0000000010244549, y: 0.0005325817, z: -8.1956386e-10}
+      rotation: {x: -0.040823285, y: -0.0017191909, z: -0.003104113, w: 0.99916005}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.99999994}
+    - name: Finger02_L_jnt_02_end
+      parentName: Finger02_L_jnt_02
+      position: {x: -0, y: 0.0005325822, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Thumb_L_jnt_01
+      parentName: Wrist_L_jnt
+      position: {x: -0.0016084808, y: 0.0015103543, z: -0.00024903752}
+      rotation: {x: -0.012641469, y: -0.12834352, z: 0.43978387, w: 0.88879603}
+      scale: {x: 0.99999964, y: 0.9999995, z: 0.9999999}
+    - name: Thumb_L_jnt_02
+      parentName: Thumb_L_jnt_01
+      position: {x: 6.705522e-10, y: 0.000628548, z: 0.0000000010430813}
+      rotation: {x: -0.038246535, y: -0.012730902, z: 0.009258461, w: 0.9991444}
+      scale: {x: 1, y: 1.0000005, z: 1}
+    - name: Thumb_L_jnt_02_end
+      parentName: Thumb_L_jnt_02
+      position: {x: -0, y: 0.00062854803, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_R_jnt1
+      parentName: Chest_C_jnt
+      position: {x: 0.005164622, y: 0.00074678985, z: 0.0007377517}
+      rotation: {x: 0.48440793, y: -0.5151204, z: 0.49563086, w: 0.5043313}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.99999994}
+    - name: Elbow_R_jnt1
+      parentName: Shoulder_R_jnt1
+      position: {x: -3.7252902e-11, y: -0.0034572142, z: -0.000000006556511}
+      rotation: {x: 0.012093291, y: 0.0017547011, z: -0.049867824, w: -0.9986811}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000005}
+    - name: Wrist_R_jnt1
+      parentName: Elbow_R_jnt1
+      position: {x: 4.842877e-10, y: -0.0027322494, z: 0.000000060945744}
+      rotation: {x: -0.026796948, y: 0.006008062, z: -0.027227739, w: 0.999252}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000005}
+    - name: Finger01_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: 0.00080423936, y: -0.0026761133, z: -0.00027520722}
+      rotation: {x: -0.013254258, y: -0.03321232, z: 0.064101525, w: 0.9973026}
+      scale: {x: 0.99999976, y: 1, z: 0.9999994}
+    - name: Finger01_R_jnt_04
+      parentName: Finger01_R_jnt_03
+      position: {x: -0.000000028535723, y: -0.00064522115, z: -0.00000006325543}
+      rotation: {x: -0.99180627, y: 0.0000271003, z: -0.12775171, w: 0.000045476932}
+      scale: {x: 0.9999997, y: 0.99999994, z: 1.0000002}
+    - name: Finger01_R_jnt_04_end
+      parentName: Finger01_R_jnt_04
+      position: {x: -0, y: 0.0006452607, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger02_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: -0.0009785778, y: -0.002411359, z: -0.00006269119}
+      rotation: {x: 0.023962623, y: -0.09063747, z: 0.07641801, w: -0.9926585}
+      scale: {x: 0.9999995, y: 1.0000002, z: 0.9999993}
+    - name: Finger02_R_jnt_04
+      parentName: Finger02_R_jnt_03
+      position: {x: -0.000000007357448, y: -0.00053263974, z: 0.000000008754432}
+      rotation: {x: -0.9971307, y: 0.000006643821, z: -0.07570014, w: -0.0000072917883}
+      scale: {x: 1.0000002, y: 0.9999993, z: 1.0000008}
+    - name: Finger02_R_jnt_04_end
+      parentName: Finger02_R_jnt_04
+      position: {x: -0, y: 0.00053261616, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Thumb_R_jnt_03
+      parentName: Wrist_R_jnt1
+      position: {x: 0.0016084808, y: -0.001510353, z: 0.00024901467}
+      rotation: {x: -0.012641989, y: -0.12834303, z: 0.43978417, w: 0.888796}
+      scale: {x: 0.9999998, y: 0.9999995, z: 0.99999976}
+    - name: Thumb_R_jnt_04
+      parentName: Thumb_R_jnt_03
+      position: {x: 0.0000000032782554, y: -0.0006285373, z: -0.000000022128225}
+      rotation: {x: -0.9719433, y: -0.000007879918, z: 0.2352153, w: 0.000017020846}
+      scale: {x: 0.9999995, y: 1.0000001, z: 0.9999999}
+    - name: Thumb_R_jnt_04_end
+      parentName: Thumb_R_jnt_04
+      position: {x: -0, y: 0.00062854064, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pelvis_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -0.0002927383, y: -0.0035980698, z: -0.000202659}
+      rotation: {x: -0.0000000014551915, y: -4.547474e-11, z: 0.0000000023554494, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Hip_L_jnt
+      parentName: Pelvis_C_jnt
+      position: {x: -0.0019252104, y: -0.00084525306, z: -0.00023431121}
+      rotation: {x: -0.011269469, y: 0.052910823, z: 0.9976631, w: 0.041736532}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999997}
+    - name: Knee_L_jnt
+      parentName: Hip_L_jnt
+      position: {x: -1.9557773e-10, y: 0.00079086353, z: 7.4505804e-11}
+      rotation: {x: -0.33475146, y: -0.0077730613, z: -0.011883729, w: 0.9421994}
+      scale: {x: 0.9999996, y: 1.0000004, z: 0.99999976}
+    - name: Ankle_L_jnt
+      parentName: Knee_L_jnt
+      position: {x: -3.7252902e-11, y: 0.000708216, z: -1.862645e-10}
+      rotation: {x: 0.6722191, y: 0.00504607, z: 0.050657235, w: 0.7386001}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.99999964}
+    - name: Ball_L_jnt
+      parentName: Ankle_L_jnt
+      position: {x: 1.2572854e-10, y: 0.0012350687, z: -5.5879353e-11}
+      rotation: {x: 0.32602838, y: -0.0000000037281853, z: 0.000000028007662, w: 0.94536}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: Toe_L_jnt
+      parentName: Ball_L_jnt
+      position: {x: 1.9063008e-11, y: 0.0018297437, z: 0}
+      rotation: {x: -0.00000020861621, y: -1.12505534e-11, z: 0.0000000014551534, w: 1}
+      scale: {x: 1.0000006, y: 1.0000002, z: 0.99999994}
+    - name: Toe_L_jnt_end
+      parentName: Toe_L_jnt
+      position: {x: -0, y: 0.0018297435, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_R_jnt
+      parentName: Pelvis_C_jnt
+      position: {x: 0.0015711202, y: -0.0007871488, z: 0.00014759401}
+      rotation: {x: 0.008132243, y: 0.9983485, z: -0.0568285, w: 0.0021959797}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Knee_R_jnt
+      parentName: Hip_R_jnt
+      position: {x: 5.966285e-11, y: -0.0007908636, z: -2.1420418e-10}
+      rotation: {x: -0.33725846, y: 0.0003694743, z: 0.00056472, w: 0.9414119}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000002}
+    - name: Ankle_R_jnt
+      parentName: Knee_R_jnt
+      position: {x: 2.0421793e-10, y: -0.00070822163, z: -0.0000000049057416}
+      rotation: {x: 0.67173314, y: 0.0007705704, z: -0.008698606, w: 0.7407418}
+      scale: {x: 1.0000006, y: 1.0000004, z: 1.0000002}
+    - name: Ball_R_jnt
+      parentName: Ankle_R_jnt
+      position: {x: -1.8524587e-10, y: -0.001235068, z: -0.0000000048445505}
+      rotation: {x: 0.32602808, y: -4.6443793e-11, z: -0.000000028377517, w: 0.9453601}
+      scale: {x: 0.99999964, y: 0.9999993, z: 0.99999976}
+    - name: Toe_R_jnt
+      parentName: Ball_R_jnt
+      position: {x: 8.240022e-11, y: -0.0018297442, z: 2.3545e-10}
+      rotation: {x: -0.00000008940696, y: 1.0479117e-11, z: -4.5390254e-11, w: 1}
+      scale: {x: 1.0000002, y: 0.9999997, z: 0.9999999}
+    - name: Toe_R_jnt_end
+      parentName: Toe_R_jnt
+      position: {x: -0, y: 0.0018297447, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso_C_jnt
+      parentName: Torso_C_jnt_NoStrechSquash
+      position: {x: -3.1791385e-11, y: 3.9202858e-10, z: -2.9722287e-11}
+      rotation: {x: -0.0000000014551915, y: -6.82121e-11, z: -5.336176e-10, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Torso_C_jnt_end
+      parentName: Torso_C_jnt
+      position: {x: -0, y: 0.0021630335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Body
+      parentName: uploads_files_2730565_Base+Fall+Guys+Model(Clone)
+      position: {x: -0, y: 0.00000007623325, z: 0.46791637}
+      rotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Plane
+      parentName: uploads_files_2730565_Base+Fall+Guys+Model(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 215.04292, y: 215.04292, z: 215.04292}
+    - name: Sphere
+      parentName: uploads_files_2730565_Base+Fall+Guys+Model(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 793.76733, y: 793.76733, z: 793.76733}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
