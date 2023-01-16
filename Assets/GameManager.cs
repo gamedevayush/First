@@ -10,13 +10,18 @@ public class GameManager : MonoBehaviour
 	public GameObject moveScript;
 	public GameObject Ground;
 	public GameObject GroundMesh;
-	
+	public SkinnedMeshRenderer playerSkin; //Variable Created By Ayusharma for Changing material on Skinned Mesh Renderer
+
 	public int CurrLevel;
 	public int levelUnlocked;
 	public int coins;
 	public int power;
 	public TMP_Text coinText;
 	public bool canVibrate;
+	public int currentSkinNumber = 1;  //Variable Created By Ayusharma
+	public string allSkinState = "0000000000";
+
+	
 	
 	private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
@@ -102,6 +107,42 @@ public class GameManager : MonoBehaviour
 		moveScript.GetComponent<PlayerMovement>().enabled=true;
 		
 	}
+
+	//Below three functions are Created By  Ayusharma
+	public void OnSaveSkin(int skinNumber,Texture tex)
+    {
+		currentSkinNumber = skinNumber;
+		unlockSkin(skinNumber);
+		ChangeSkin(skinNumber,tex);
+    }
+
+	public void unlockSkin(int skinNumber)
+    {
+		string temp = "";
+		int i = 0;
+		for(i =0;i<allSkinState.Length;i++)
+        {
+			if(skinNumber == i+1)
+            {
+				temp = temp + "1";
+            }
+			else
+            {
+				temp = temp +allSkinState[i];
+            }
+        }
+
+		allSkinState = temp;
+    }
+
+	public void ChangeSkin(int skinNumber,Texture tex)
+    {
+		playerSkin.material.mainTexture = (tex);
+    }
+
+	
+
+	
 	
 	public void OnEndStage()
 	{

@@ -7,6 +7,7 @@ using TMPro;
 public class SkinObject : MonoBehaviour
 {
     public int SkinNumb;
+	public Texture skinTexture;
 	public int Costing; 
 	public TMP_Text Label;
 	public bool Unlocked;
@@ -14,6 +15,7 @@ public class SkinObject : MonoBehaviour
 	public Image Overlay;
 	public Sprite LockS;
 	public Sprite DoneS;
+	public GameManager gameManager;
     void OnEnable()
     {
 		Unlocked=false;
@@ -55,11 +57,27 @@ public class SkinObject : MonoBehaviour
 		{
 			Debug.Log("PLAY");
 			GameManager.Instance.OnStartStage(this.SkinNumb);
+			
+
 		}
 		else
 		{
 			Debug.Log("LOCKED");
+			if(gameManager.coins >= Costing)
+            {
+				Debug.Log("You Can purchase this Skin");
+				gameManager.OnSaveSkin(SkinNumb, skinTexture);
+            }
+			else
+            {
+				Debug.Log("You Dont have Enough Coins");
+            }
 		}
 	}
+
+	public void AssignCost()
+    {
+		Label.text = Costing.ToString();
+    }
 	
-	}
+}

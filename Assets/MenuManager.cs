@@ -12,7 +12,8 @@ public class MenuManager : MonoBehaviour
 	public GameObject GameMenu;
 //	public GameObject FinishMenu;
 	public GameObject GameOverMenu;
-	
+	public GameObject skinMenu;           //Changed By AYUSHARMA
+
 	public TMP_Text Finisher;
 
     private void Awake()
@@ -51,6 +52,10 @@ public class MenuManager : MonoBehaviour
 		{
 			LevelMenu.SetActive(true);
 		}
+		if(name == "skinMenu")            //Changed By AYUSHARMA
+		{
+			skinMenu.SetActive(true);
+        }
 		
 		
 	}
@@ -62,6 +67,7 @@ public class MenuManager : MonoBehaviour
 		LevelMenu.SetActive(false);
 		GameOverMenu.SetActive(false);
 		//FinishMenu.SetActive(false);
+		skinMenu.SetActive(false);   //Changed By AYUSHARMA
 	}
 	
 }
