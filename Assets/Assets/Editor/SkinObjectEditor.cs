@@ -11,7 +11,7 @@ public class SkinObjectEditor : Editor
 
         if(GUILayout.Button("Assign Cost"))
         {
-            skinObject.AssignCost();
+            skinObject.AssignCosting();
         }
     }
 

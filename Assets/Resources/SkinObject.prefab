@@ -60,13 +60,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkinNumb: 0
+  skinTexture: {fileID: 0}
   Costing: 0
-  Label: {fileID: 0}
+  Label: {fileID: 8098373019009550130}
   Unlocked: 0
   Status: 
-  Overlay: {fileID: 0}
-  LockS: {fileID: 0}
-  DoneS: {fileID: 0}
+  Overlay: {fileID: 3319831222676528385}
+  MatImage: {fileID: 3876288088442489175}
+  MatSprite: {fileID: 0}
+  LockS: {fileID: 21300000, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  DoneS: {fileID: 21300118, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  isActive: 0
 --- !u!1 &2615920207927870352
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -102.5}
+  m_AnchoredPosition: {x: 0, y: -130}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3182133975054115307
@@ -142,8 +146,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -160,8 +164,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 106.4
-  m_fontSizeBase: 106.4
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -237,8 +241,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 17.35}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -92.5, y: 95.2}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &565853963638905529
 CanvasRenderer:
@@ -317,7 +321,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 250}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6170030405349074251
 CanvasRenderer:
@@ -401,8 +405,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LevelObjects, Assembly-CSharp
+      - m_Target: {fileID: 63769416930425386}
+        m_TargetAssemblyTypeName: SkinObject, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:

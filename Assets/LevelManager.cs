@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
 	}
 	public void Correct()
 	{
-		points=points+10;
+		points=points+20;
 		Debug.Log(points);
 	}	
 	

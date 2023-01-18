@@ -13,13 +13,15 @@ public class GameManager : MonoBehaviour
 	public SkinnedMeshRenderer playerSkin; //Variable Created By Ayusharma for Changing material on Skinned Mesh Renderer
 
 	public int CurrLevel;
+	public int CurrMat;	
 	public int levelUnlocked;
 	public int coins;
 	public int power;
 	public TMP_Text coinText;
 	public bool canVibrate;
 	public int currentSkinNumber = 1;  //Variable Created By Ayusharma
-	public string allSkinState = "0000000000";
+
+	public GameObject PurchaseBox;
 
 	
 	
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         MainMenuCamera.SetActive(true);
 		GameCamera.SetActive(false);
 		moveScript.GetComponent<PlayerMovement>().enabled=false;
+		MenuManager.Instance.ChangeMenu("skinMenu");
 		MenuManager.Instance.ChangeMenu("mainmenu");
 		PostStart();
     }
@@ -54,7 +57,11 @@ public class GameManager : MonoBehaviour
 		coins=PlayerPrefs.GetInt("Coins",0);
 		power=PlayerPrefs.GetInt("Power",1);
 		coinText.text=coins.ToString();
+		currentSkinNumber=PlayerPrefs.GetInt("SkinCurr",0);
+		
 	}
+	
+	
 	
 	void SaveLevel(int data)
 	{
@@ -108,40 +115,30 @@ public class GameManager : MonoBehaviour
 		
 	}
 
-	//Below three functions are Created By  Ayusharma
-	public void OnSaveSkin(int skinNumber,Texture tex)
-    {
-		currentSkinNumber = skinNumber;
-		unlockSkin(skinNumber);
-		ChangeSkin(skinNumber,tex);
-    }
+	
 
 	public void unlockSkin(int skinNumber)
     {
-		string temp = "";
-		int i = 0;
-		for(i =0;i<allSkinState.Length;i++)
-        {
-			if(skinNumber == i+1)
-            {
-				temp = temp + "1";
-            }
-			else
-            {
-				temp = temp +allSkinState[i];
-            }
-        }
-
-		allSkinState = temp;
+		PlayerPrefs.SetInt("Skin"+skinNumber,1);
+		MenuManager.Instance.ChangeMenu("skinMenu");
     }
 
 	public void ChangeSkin(int skinNumber,Texture tex)
     {
 		playerSkin.material.mainTexture = (tex);
+		currentSkinNumber=skinNumber;
+		PlayerPrefs.SetInt("CurrMat",skinNumber);
     }
+	
 
 	
 
+	public void Purchase(int Skin,int Costing)
+	{
+		PurchaseBox.SetActive(true);
+		PurchaseBox.GetComponent<PurchaseManager>().Purchase(Costing,Skin);
+		
+	}
 	
 	
 	public void OnEndStage()
@@ -172,6 +169,8 @@ public class GameManager : MonoBehaviour
 		coins=coins-pointIn;
 		SaveCoin(coins);
 	}
+	
+	
 	public void IncreaseLevel()
 	{
 		if(levelUnlocked==CurrLevel)

@@ -13,15 +13,30 @@ public class SkinObject : MonoBehaviour
 	public bool Unlocked;
 	public string Status;
 	public Image Overlay;
+	public Image MatImage;
+	public Sprite MatSprite;
 	public Sprite LockS;
 	public Sprite DoneS;
-	public GameManager gameManager;
+	public bool isActive;
     void OnEnable()
     {
 		Unlocked=false;
-        SetSkins();
+        
 		Label.text=Costing.ToString();
-    }
+		if((PlayerPrefs.GetInt("CurrMat",0))==this.SkinNumb)
+		{
+			GameManager.Instance.ChangeSkin(SkinNumb,skinTexture);
+			this.isActive=true;
+		}
+		else
+		{
+			this.isActive=false;
+		}
+		SetSkins();
+
+	
+	MatImage.sprite=MatSprite;
+	}
 
     // Update is called once per frame
     void Update()
@@ -31,42 +46,44 @@ public class SkinObject : MonoBehaviour
 	
 	void SetSkins()
 	{
-		/*if(LevelNumb<=GameManager.Instance.levelUnlocked)
+		if(PlayerPrefs.GetInt("Skin"+SkinNumb,0)==1)
 		{
 			Unlocked=true;
-			if(LevelNumb==GameManager.Instance.levelUnlocked)
+			Label.text="";
+			if(isActive)
 			{
-				Overlay.GetComponent<Image>().enabled=false;
+				Overlay.sprite=DoneS;
+				Overlay.GetComponent<Image>().enabled=true;
+				GameManager.Instance.currentSkinNumber=SkinNumb;
 			}
 			else
 			{
-				Overlay.sprite=DoneS;
+				Overlay.GetComponent<Image>().enabled=false;
 			}
 		}
 		else
 		{
 			Overlay.sprite=LockS;
 		}
-		Debug.Log(GameManager.Instance.levelUnlocked);
-		*/
+		
 	}
 	
 	public void OnClick()
 	{
 		if(Unlocked==true)
 		{
-			Debug.Log("PLAY");
-			GameManager.Instance.OnStartStage(this.SkinNumb);
-			
-
+			Debug.Log("Active");
+			GameManager.Instance.ChangeSkin(SkinNumb,skinTexture);
+			MenuManager.Instance.ChangeMenu("mainMenu");
+			MenuManager.Instance.ChangeMenu("skinMenu");
 		}
 		else
 		{
 			Debug.Log("LOCKED");
-			if(gameManager.coins >= Costing)
+			if(GameManager.Instance.coins >= Costing)
             {
-				Debug.Log("You Can purchase this Skin");
-				gameManager.OnSaveSkin(SkinNumb, skinTexture);
+				Debug.Log("You Can Purchase this Skin");
+				GameManager.Instance.Purchase(SkinNumb,Costing);
             }
 			else
             {
@@ -75,7 +92,7 @@ public class SkinObject : MonoBehaviour
 		}
 	}
 
-	public void AssignCost()
+	public void AssignCosting()
     {
 		Label.text = Costing.ToString();
     }
