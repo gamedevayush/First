@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
 	public GameObject LevelMenu;
 	public GameObject MainMenu;
 	public GameObject GameMenu;
-//	public GameObject FinishMenu;
+	public GameObject StoreMenu;
 	public GameObject GameOverMenu;
 	public GameObject skinMenu;           //Changed By AYUSHARMA
 
@@ -56,6 +56,11 @@ public class MenuManager : MonoBehaviour
 		{
 			skinMenu.SetActive(true);
         }
+		if(name == "storeMenu")            //Changed By AYUSHARMA
+		{
+			StoreMenu.SetActive(true);
+        }
+		
 		
 		
 	}
@@ -67,7 +72,8 @@ public class MenuManager : MonoBehaviour
 		LevelMenu.SetActive(false);
 		GameOverMenu.SetActive(false);
 		//FinishMenu.SetActive(false);
-		skinMenu.SetActive(false);   //Changed By AYUSHARMA
+		skinMenu.SetActive(false);  
+		StoreMenu.SetActive(false); 						//Changed By AYUSHARMA
 	}
 	
 }

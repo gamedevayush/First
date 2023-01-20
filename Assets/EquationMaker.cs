@@ -67,23 +67,23 @@ public class EquationMaker : MonoBehaviour
 	   if(ran_ans_int==0) //S1
 	   {
 		   ans1=ans;
-		   ans2=ans-1;
-		   ans3=ans+1;
+		   ans2 = ans +1;
+		   ans3 = ans2 -1;
 		   s1.GetComponent<AnswerSender>().Correcthai();
 		   Debug.Log("Run2");
 	   }
 	   if(ran_ans_int==1) //S2
 	   {
-		   ans1=ans-1;
+		   ans1 = ans+1;
 		   ans2=ans;
-		   ans3=ans+1;
+		   ans3=ans-1;
 		   s2.GetComponent<AnswerSender>().Correcthai();
 		   Debug.Log("Run2");
 	   }
 	   if(ran_ans_int==2) //S3
 	   {
-		   ans1=ans-1;
-		   ans2=ans+1;
+		   ans1=ans +1 ;
+		   ans2= ans -1;
 		   ans3=ans;
 		   s3.GetComponent<AnswerSender>().Correcthai();
 		   Debug.Log("Run2");
