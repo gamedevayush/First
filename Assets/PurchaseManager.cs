@@ -21,6 +21,7 @@ public class PurchaseManager : MonoBehaviour
 	{
 		GameManager.Instance.DecreaseCoin(cost);
 		GameManager.Instance.unlockSkin(skinNumb);
+		AdManagerScript.Instance.ShowInterstitial();
 		ResetValues();
 	}
 	public void ResetValues()

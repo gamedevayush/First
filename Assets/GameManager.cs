@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 	public int coins;
 	public int power;
 	public TMP_Text coinText;
+	public TMP_Text LevelText;
 	public bool canVibrate;
 	public int currentSkinNumber = 1;  //Variable Created By Ayusharma
 
@@ -40,7 +41,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-		levelUnlocked=1;
+		LevelText.text = " ";
+		levelUnlocked =1;
 		canVibrate=true;
 		power=2;
         MainMenuCamera.SetActive(true);
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
 	{
 		levelUnlocked=PlayerPrefs.GetInt("Level",1);
 		coins=PlayerPrefs.GetInt("Coins",0);
-		power=PlayerPrefs.GetInt("Power",1);
+		power=PlayerPrefs.GetInt("Power",2);
 		coinText.text=coins.ToString();
 		currentSkinNumber=PlayerPrefs.GetInt("SkinCurr",0);
 		
@@ -112,7 +114,7 @@ public class GameManager : MonoBehaviour
 		MainMenuCamera.SetActive(false);
 		GameCamera.SetActive(true);
 		moveScript.GetComponent<PlayerMovement>().enabled=true;
-		
+		LevelText.text = "LEVEL " + data;
 	}
 
 	
@@ -178,6 +180,11 @@ public class GameManager : MonoBehaviour
 		SaveLevel(levelUnlocked+1);
 		}
 		
+	}
+
+	public void NextLevel()
+	{
+		OnStartStage(levelUnlocked);
 	}
 	
 		

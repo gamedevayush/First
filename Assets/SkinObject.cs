@@ -21,7 +21,7 @@ public class SkinObject : MonoBehaviour
     void OnEnable()
     {
 		Unlocked=false;
-        
+		Label.color = Color.white;
 		Label.text=Costing.ToString();
 		if((PlayerPrefs.GetInt("CurrMat",0))==this.SkinNumb)
 		{
@@ -53,11 +53,15 @@ public class SkinObject : MonoBehaviour
 			if(isActive)
 			{
 				Overlay.sprite=DoneS;
+				Label.text = "Active";
+					Label.color = Color.green;
 				Overlay.GetComponent<Image>().enabled=true;
 				GameManager.Instance.currentSkinNumber=SkinNumb;
 			}
 			else
 			{
+				Label.text = "Owned";
+				Label.color = Color.yellow;
 				Overlay.GetComponent<Image>().enabled=false;
 			}
 		}
@@ -73,6 +77,7 @@ public class SkinObject : MonoBehaviour
 		if(Unlocked==true)
 		{
 			Debug.Log("Active");
+			
 			GameManager.Instance.ChangeSkin(SkinNumb,skinTexture);
 			MenuManager.Instance.ChangeMenu("mainMenu");
 			MenuManager.Instance.ChangeMenu("skinMenu");
@@ -96,5 +101,6 @@ public class SkinObject : MonoBehaviour
     {
 		Label.text = Costing.ToString();
     }
+
 	
 }

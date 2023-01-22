@@ -29,7 +29,6 @@ public class Scorer : MonoBehaviour
             counter += Time.deltaTime;
 
         float val = Mathf.Lerp(fromVal, toVal, counter / duration);
-        Debug.Log("Val: " + val);
 		finalScore.text=((int)val).ToString();
         yield return null;
     }

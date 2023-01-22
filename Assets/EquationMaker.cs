@@ -62,15 +62,15 @@ public class EquationMaker : MonoBehaviour
 		   ans=(float)eqv1/(float)eqv2;
 		   oper="/";
 	   }
-	   Debug.Log("Run");
+	   
 	   ran_ans_int=Random.Range(0,3);
 	   if(ran_ans_int==0) //S1
 	   {
 		   ans1=ans;
 		   ans2 = ans +1;
-		   ans3 = ans2 -1;
+		   ans3 = ans -1;
 		   s1.GetComponent<AnswerSender>().Correcthai();
-		   Debug.Log("Run2");
+		
 	   }
 	   if(ran_ans_int==1) //S2
 	   {
@@ -78,7 +78,7 @@ public class EquationMaker : MonoBehaviour
 		   ans2=ans;
 		   ans3=ans-1;
 		   s2.GetComponent<AnswerSender>().Correcthai();
-		   Debug.Log("Run2");
+		 
 	   }
 	   if(ran_ans_int==2) //S3
 	   {
@@ -86,7 +86,7 @@ public class EquationMaker : MonoBehaviour
 		   ans2= ans -1;
 		   ans3=ans;
 		   s3.GetComponent<AnswerSender>().Correcthai();
-		   Debug.Log("Run2");
+		  
 	   }
 	   if(ran_oper_int==3) //If divide, show three deciamAlpoints
 	   {
@@ -101,7 +101,7 @@ public class EquationMaker : MonoBehaviour
 		   an2.text=ans2.ToString();
 		   an3.text=ans3.ToString();
 	   }
-	   ques.text=eqv1.ToString()+oper.ToString()+eqv2.ToString()+"=?";
+	   ques.text=eqv1.ToString()+oper.ToString()+eqv2.ToString();
     }
    
 	

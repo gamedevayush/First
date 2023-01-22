@@ -10,11 +10,14 @@ public class MenuManager : MonoBehaviour
 	public GameObject LevelMenu;
 	public GameObject MainMenu;
 	public GameObject GameMenu;
-	public GameObject StoreMenu;
+	public GameObject SettingsMenu;
 	public GameObject GameOverMenu;
-	public GameObject skinMenu;           //Changed By AYUSHARMA
+	public GameObject skinMenu;
+	public GameObject RewardsMenu;
 
+	public GameObject CoinsPlace;
 	public TMP_Text Finisher;
+	public TMP_Text FinisherBtn;
 
     private void Awake()
     {
@@ -29,51 +32,67 @@ public class MenuManager : MonoBehaviour
 	public void ChangeMenu(string name)
 	{
 		ResetAll();
-		if(name=="gamemenu")
+
+		if (name == "reward")
+		{
+			RewardsMenu.SetActive(true);
+			CoinsPlace.SetActive(false);
+		}
+
+		if (name=="gamemenu")
 		{
 			GameMenu.SetActive(true);
+			CoinsPlace.SetActive(false);
 		}
 		if(name=="gameover")
 		{
 			GameOverMenu.SetActive(true);
 			Finisher.text="Game Over";
-			
+			FinisherBtn.text="Restart";
+			CoinsPlace.SetActive(false);
 		}
 		if(name=="finish")
 		{
 			GameOverMenu.SetActive(true);
 			Finisher.text="Congratulations!";
+			FinisherBtn.text = "NEXT";
+			CoinsPlace.SetActive(false);
 		}
 		if(name=="mainmenu")
 		{
 			MainMenu.SetActive(true);
+			CoinsPlace.SetActive(true);
 		}
 		if(name=="levelmenu")
 		{
 			LevelMenu.SetActive(true);
+			CoinsPlace.SetActive(false);
 		}
 		if(name == "skinMenu")            //Changed By AYUSHARMA
 		{
 			skinMenu.SetActive(true);
-        }
-		if(name == "storeMenu")            //Changed By AYUSHARMA
+			CoinsPlace.SetActive(true);
+		}
+			if(name == "settingsMenu")            //Changed By AYUSHARMA
 		{
-			StoreMenu.SetActive(true);
-        }
-		
-		
-		
+			SettingsMenu.SetActive(true);
+			CoinsPlace.SetActive(false);
+		}
+
+
+
 	}
-	
+
 	void ResetAll()
 	{
 		GameMenu.SetActive(false);
 		MainMenu.SetActive(false);
 		LevelMenu.SetActive(false);
 		GameOverMenu.SetActive(false);
-		//FinishMenu.SetActive(false);
-		skinMenu.SetActive(false);  
-		StoreMenu.SetActive(false); 						//Changed By AYUSHARMA
+		RewardsMenu.SetActive(false);
+		skinMenu.SetActive(false);
+		SettingsMenu.SetActive(false);
+		CoinsPlace.SetActive(true);
 	}
 	
 }

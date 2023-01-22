@@ -1,8 +1,83 @@
 fileFormatVersion: 2
 guid: bed2cdad88cf0cc45862a15db0796f52
 ModelImporter:
-  serializedVersion: 21300
-  internalIDToNameTable: []
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -6135184973256917163
+    second: Root|Root|ArmWave_End|Base Layer
+  - first:
+      74: 608261772562243442
+    second: Root|Root|ArmWave_Loop|Base Layer
+  - first:
+      74: 4043177296862295508
+    second: Root|Root|ArmWave_Start|Base Layer
+  - first:
+      74: 4398290176553041791
+    second: Root|Root|CH_Fallguy_FG_emote_HappyClap|Base Layer
+  - first:
+      74: -2193908607922749175
+    second: Root|Root|CH_Fallguy_FG_Emote_Mexwave|Base Layer
+  - first:
+      74: 5562146422764846144
+    second: Root|Root|FG_Beefcake_A|Base Layer
+  - first:
+      74: -5923466050370452948
+    second: Root|Root|FG_CostumeChangeLooking_A|Base Layer
+  - first:
+      74: -129131854597218775
+    second: Root|Root|FG_Emote_Armthrow_A|Base Layer
+  - first:
+      74: 2913469360978397841
+    second: Root|Root|FG_Emote_Chicken_A|Base Layer
+  - first:
+      74: 5708671929493448923
+    second: Root|Root|FG_Emote_Neener_A|Base Layer
+  - first:
+      74: 5460230128601564955
+    second: Root|Root|FG_Emote_Pattycake_A|Base Layer
+  - first:
+      74: -3846471933789683596
+    second: Root|Root|FG_Emote_PirateDance_A|Base Layer
+  - first:
+      74: -1321990305582151567
+    second: Root|Root|FG_Emote_RobotDance_A|Base Layer
+  - first:
+      74: -1591964159171138234
+    second: Root|Root|FG_Emote_slowclap_A|Base Layer
+  - first:
+      74: -9103721987637870038
+    second: Root|Root|FG_Emote_ThumbsUp_A|Base Layer
+  - first:
+      74: 94004327335702338
+    second: Root|Root|FG_Emote_Wave_A|Base Layer
+  - first:
+      74: 7765047362146079786
+    second: Root|Root|FG_Emote_WaveOverHead_A|Base Layer
+  - first:
+      74: 6125005768225858960
+    second: Root|Root|FG_Emote_Zsnap_A|Base Layer
+  - first:
+      74: -973273196082963871
+    second: Root|Root|FG_Idle_A|Base Layer
+  - first:
+      74: -4862107265568172639
+    second: Root|Root|FG_Idle_Joggingonspot|Base Layer
+  - first:
+      74: 401448258099218071
+    second: Root|Root|FG_Idle_TouchingToes|Base Layer
+  - first:
+      74: -683338835829274405
+    second: Root|Root|FG_Loading_Falling_A|Base Layer
+  - first:
+      74: 3615506826218446034
+    second: Root|Root|FG_Walk_A|Base Layer
+  - first:
+      74: -471552441677148699
+    second: Root|Root|FG_Walk_Left_A|Base Layer
+  - first:
+      74: -4227650040070532267
+    second: Root|Root|FG_Walk_Right_A|Base Layer
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -869,7 +944,6 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
