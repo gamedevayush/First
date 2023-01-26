@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 	public bool canVibrate;
 	public int currentSkinNumber = 1;  //Variable Created By Ayusharma
 
+	public AudioSource coinSound;
 	public GameObject PurchaseBox;
 
 	
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+		coinSound = GetComponent<AudioSource>();
 		LevelText.text = " ";
 		levelUnlocked =1;
 		canVibrate=true;
@@ -162,13 +164,17 @@ public class GameManager : MonoBehaviour
 	
 	public void IncreaseCoin(int pointIn)
 	{
-		coins=coins+pointIn;
+		StartCoroutine(changeValueOverTime(coins, coins + pointIn, 3f));
+		coinSound.Play(0);
+		coins =coins+pointIn;
 		SaveCoin(coins);
+
 	}
 	
 	public void DecreaseCoin(int pointIn)
 	{
-		coins=coins-pointIn;
+		StartCoroutine(changeValueOverTime(coins, coins - pointIn, 3f));
+		coins =coins-pointIn;
 		SaveCoin(coins);
 	}
 	
@@ -186,7 +192,25 @@ public class GameManager : MonoBehaviour
 	{
 		OnStartStage(levelUnlocked);
 	}
-	
-		
-	
+
+
+
+	IEnumerator changeValueOverTime(float fromVal, float toVal, float duration)
+	{
+		float counter = 0f;
+
+		while (counter < duration)
+		{
+			if (Time.timeScale == 0)
+				counter += Time.unscaledDeltaTime;
+			else
+				counter += Time.deltaTime;
+
+			float val = Mathf.Lerp(fromVal, toVal, counter / duration);
+			coinText.text = ((int)val).ToString();
+			yield return null;
+		}
+	}
+
+
 }

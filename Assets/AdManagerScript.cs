@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using GoogleMobileAds.Api;
+using TMPro;
 
 public class AdManagerScript : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class AdManagerScript : MonoBehaviour
     private InterstitialAd interstitial;
     private RewardedAd rewardedAd;
 
+
+    public TMP_Text newCoinsGetText;
+    public GameObject newCoinsGetBox;
     public GameObject FreeAdsButton; 
 
     public string BannerID="ca-app-pub-3940256099942544/6300978111";
@@ -41,7 +45,7 @@ public class AdManagerScript : MonoBehaviour
         RequestandShowBanner();
         CreateAndLoadRewardedAd();
         RequestInterstitial();
-        InvokeRepeating("ReCheckRewarded", 5f,10f);
+        InvokeRepeating("ReCheckRewarded", 5f,80f);
     }
 
     private void RequestandShowBanner()
@@ -64,7 +68,7 @@ public class AdManagerScript : MonoBehaviour
         if (this.interstitial.IsLoaded())
         {
             this.interstitial.Show();
-            Invoke("RequestInterstitial",20f);
+            Invoke("RequestInterstitial",5f);
         }
     }
 
@@ -87,7 +91,7 @@ public class AdManagerScript : MonoBehaviour
     }
     public void HandleRewardedAdLoaded(object sender, EventArgs args)
     {
-        FreeAdsButton.SetActive(true);
+       // FreeAdsButton.SetActive(true);
     }
 
     public void HandleRewardedAdClosed(object sender, EventArgs args)
@@ -97,7 +101,9 @@ public class AdManagerScript : MonoBehaviour
 
     public void HandleUserEarnedReward(object sender, Reward args)
     {
-        GameManager.Instance.IncreaseCoin(400);
+        GameManager.Instance.IncreaseCoin(100);
+        newCoinsGetBox.SetActive(true);
+        newCoinsGetText.text = "+100";
         FreeAdsButton.SetActive(false);
     }
 

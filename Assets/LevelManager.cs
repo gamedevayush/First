@@ -37,6 +37,7 @@ public class LevelManager : MonoBehaviour
 		GameManager.Instance.IncreaseCoin(points);
 		GameManager.Instance.OnEndStage();
 		MenuManager.Instance.ChangeMenu("finish");
+		
 	}
 	public void Correct()
 	{
@@ -53,7 +54,11 @@ public class LevelManager : MonoBehaviour
 		scorer.updateScore(points);
 		GameManager.Instance.OnEndStage();
 		MenuManager.Instance.ChangeMenu("gameover");
-		
+		int g = Random.Range(0, 3);
+		if (g==1)
+				{
+			AdManagerScript.Instance.ShowInterstitial();
+				}
 	}
 	
 	

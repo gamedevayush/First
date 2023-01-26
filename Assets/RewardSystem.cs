@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class RewardSystem : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class RewardSystem : MonoBehaviour
     public GameObject NoMoreRewards;
     public GameObject Rewards;
 
+    public TMP_Text newCoinsGetText;
+    public GameObject newCoinsGetBox;
     bool rewardAvailable = false;
-
+    bool isNewDate;
     public string url = "www.google.com";
-    public string urlDate = "http://worldclockapi.com/api/json/est/now";
+    public string timeSite = "https://www.gamedevayush.in/indux.php";
     public string sDate = "";
     public string tDate = "";
 
@@ -32,6 +35,7 @@ public class RewardSystem : MonoBehaviour
         notificationdot.SetActive(true);
         NoMoreRewards.SetActive(false);
         Rewards.SetActive(true);
+        isNewDate = true;
     }
 
     void RewardNotAvailable()
@@ -39,11 +43,14 @@ public class RewardSystem : MonoBehaviour
         notificationdot.SetActive(false);
         NoMoreRewards.SetActive(true);
         Rewards.SetActive(false);
+        isNewDate = false;
     }
 
     public void OnClickReward()
     {
-        GameManager.Instance.IncreaseCoin(400);
+        GameManager.Instance.IncreaseCoin(500);
+        newCoinsGetBox.SetActive(true);
+        newCoinsGetText.text = "+500";
         NoMoreRewards.SetActive(true);
         Rewards.SetActive(false);
         notificationdot.SetActive(false);
@@ -71,12 +78,11 @@ public class RewardSystem : MonoBehaviour
     }
     private IEnumerator CheckDate()
     {
-        WWW www = new WWW(urlDate);
+        WWW www = new WWW("https://www.gamedevayush.in/indux.php");
         yield return www;
-
-        string[] splitDate = www.text.Split(new string[] { "currentDateTime\":\"" }, StringSplitOptions.None);
-        sDate = splitDate[1].Substring(0, 10);
-
+        string[] splitDate = www.text.Split(new string[] { "Date" }, StringSplitOptions.None);
+        sDate = splitDate[1].Substring(0, 12);
+        Debug.Log("New" + sDate + " Old " + PlayerPrefs.GetString("LastDate"));
         CompareDate(sDate);
     }
 
@@ -86,6 +92,7 @@ public class RewardSystem : MonoBehaviour
         if (SavedDate!=date)
         {
             Debug.Log("Available");
+            isNewDate = true;
             RewardAvailable();
         }
     }
@@ -97,11 +104,11 @@ public class RewardSystem : MonoBehaviour
 
     private IEnumerator GetDate()
     {
-        WWW www = new WWW(urlDate);
+        WWW www = new WWW(timeSite);
         yield return www;
 
-        string[] splitDate = www.text.Split(new string[] { "currentDateTime\":\"" }, StringSplitOptions.None);
-        tDate = splitDate[1].Substring(0, 10);
+        string[] splitDate = www.text.Split(new string[] { "Date" }, StringSplitOptions.None);
+        tDate = splitDate[1].Substring(0, 12);
 
         SaveDate(tDate);
     }
@@ -109,6 +116,7 @@ public class RewardSystem : MonoBehaviour
     private void SaveDate(string date)
     {
         PlayerPrefs.SetString("LastDate", date);
+     
        
     }
 }

@@ -18,22 +18,25 @@ public class PlayerMovement : MonoBehaviour
 		string LineName;
 		int power;
 		public TMP_Text PowerCount;
+		public TMP_Text CountDown;
 		public UnityEngine.UI.Button PowerBtn;
 		public UnityEngine.UI.Slider StageSlider;
 		public bool isPowered;
+		public bool canMove;
  
     void OnEnable()
     {
+		canMove = false;
 		StageSlider.value=0;
 		transform.position=new Vector3(-18.13f,0.1f,0);
 		PowerVFX.SetActive(false);
 		count=0;
         dragDistance = (Screen.height * 15 / 100)/2;
-		Debug.Log(dragDistance);
 		power=GameManager.Instance.power;
 		PowerCount.text=power.ToString();
 		PowerBtn.interactable=true;
-		lfactor=GameManager.Instance.CurrLevel;		
+		lfactor=GameManager.Instance.CurrLevel;
+		StartCoroutine(CanMoveFunc());
     }
  
  
@@ -62,7 +65,10 @@ public class PlayerMovement : MonoBehaviour
 	}
     void Update()
     {
-		lerper();
+		if (canMove)
+		{
+			lerper();
+		}
         if (Input.touchCount == 1) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
@@ -145,10 +151,22 @@ public class PlayerMovement : MonoBehaviour
 	{
 		Vector3 z=new Vector3(transform.position.x,transform.position.y,zaxis);
 		transform.position=Vector3.Lerp(transform.position,z,(8+(lfactor/10))*Time.deltaTime);
-		transform.Translate((lfactor/1000)+2*Time.deltaTime,0,0);
+		transform.Translate((lfactor/1000)+1.5f*Time.deltaTime,0,0);
 	}
-	
-	
+
+	IEnumerator CanMoveFunc()
+	{
+		CountDown.text = "3";
+		yield return new WaitForSeconds(1);
+		CountDown.text = "2";
+		yield return new WaitForSeconds(1);
+		CountDown.text = "1";
+		yield return new WaitForSeconds(1);
+		canMove = true;
+		CountDown.text = "GO!";
+		yield return new WaitForSeconds(1);
+		CountDown.text = "";
+	}
 	 void OnTriggerEnter(Collider col)
 	{
 		if(col.gameObject.name=="Generator")

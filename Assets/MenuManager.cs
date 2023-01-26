@@ -27,7 +27,8 @@ public class MenuManager : MonoBehaviour
         } else {
             _instance = this;
         }
-    }
+		Handheld.Vibrate();
+	}
 	
 	public void ChangeMenu(string name)
 	{
