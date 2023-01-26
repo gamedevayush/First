@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using GoogleMobileAds.Api;
-using TMPro;
 
 public class AdManagerScript : MonoBehaviour
 {
@@ -12,10 +11,11 @@ public class AdManagerScript : MonoBehaviour
     private RewardedAd rewardedAd;
 
 
-    public TMP_Text newCoinsGetText;
+    public UnityEngine.UI.Text newCoinsGetText;
     public GameObject newCoinsGetBox;
     public GameObject FreeAdsButton; 
 
+	//public UnityEngine.UI.Text ErrorText;
     public string BannerID="ca-app-pub-3940256099942544/6300978111";
     public string InterstitialID="ca-app-pub-3940256099942544/1033173712";
     public string RewardedId1 = "ca-app-pub-3940256099942544/5224354917";
@@ -36,12 +36,17 @@ public class AdManagerScript : MonoBehaviour
         {
             _instance = this;
         }
+		//ErrorText.text=ErrorText.text+"Awake ";
     }
 
     public void Start()
     {
+		BannerID="ca-app-pub-3940256099942544/6300978111";
+		InterstitialID="ca-app-pub-3940256099942544/1033173712";
+		RewardedId1 = "ca-app-pub-3940256099942544/5224354917";
         FreeAdsButton.SetActive(false);
         MobileAds.Initialize(initStatus => { });
+		
         RequestandShowBanner();
         CreateAndLoadRewardedAd();
         RequestInterstitial();
@@ -53,6 +58,7 @@ public class AdManagerScript : MonoBehaviour
         this.bannerView = new BannerView(BannerID, AdSize.Banner, AdPosition.Bottom);
         AdRequest request = new AdRequest.Builder().Build();
         this.bannerView.LoadAd(request);
+		//ErrorText.text=ErrorText.text+"Banner Requested and Shown ";
     }
 
 
@@ -62,14 +68,20 @@ public class AdManagerScript : MonoBehaviour
         this.interstitial = new InterstitialAd(InterstitialID);
         AdRequest request = new AdRequest.Builder().Build();
         this.interstitial.LoadAd(request);
+		//ErrorText.text=ErrorText.text+request+"Interstitial Requested ";
     }
     public void ShowInterstitial()
     {
         if (this.interstitial.IsLoaded())
         {
             this.interstitial.Show();
+			//ErrorText.text=ErrorText.text+"Inter Shown ";
             Invoke("RequestInterstitial",5f);
         }
+		else
+		{
+			//ErrorText.text=ErrorText.text+"Inter Not Loaded ";
+		}
     }
 
 
@@ -87,6 +99,7 @@ public class AdManagerScript : MonoBehaviour
         AdRequest request = new AdRequest.Builder().Build();
 
         rewardedAd.LoadAd(request);
+		//ErrorText.text=ErrorText.text+"Rewarded Requested ";
 
     }
     public void HandleRewardedAdLoaded(object sender, EventArgs args)
@@ -105,6 +118,7 @@ public class AdManagerScript : MonoBehaviour
         newCoinsGetBox.SetActive(true);
         newCoinsGetText.text = "+100";
         FreeAdsButton.SetActive(false);
+		//ErrorText.text=ErrorText.text+"Reward Ace4pted ";
     }
 
 
@@ -112,6 +126,7 @@ public class AdManagerScript : MonoBehaviour
     public void ShowRewardedAd()
     {
             this.rewardedAd.Show();
+			//ErrorText.text=ErrorText.text+"Rewarded Shown ";
 
     }
 
@@ -121,6 +136,10 @@ public class AdManagerScript : MonoBehaviour
         {
             FreeAdsButton.SetActive(true);
         }
+		else
+		{
+			Invoke("ReCheckRewarded",2f);
+		}
     }
     
 }

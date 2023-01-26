@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using TMPro;
 
 public class RewardSystem : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class RewardSystem : MonoBehaviour
     public GameObject NoMoreRewards;
     public GameObject Rewards;
 
-    public TMP_Text newCoinsGetText;
+    public UnityEngine.UI.Text newCoinsGetText;
     public GameObject newCoinsGetBox;
     bool rewardAvailable = false;
     bool isNewDate;

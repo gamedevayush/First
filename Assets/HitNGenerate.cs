@@ -10,7 +10,7 @@ public class HitNGenerate : MonoBehaviour
 	
    public  void Generate(string nameofObj)
 	{
-				GameObject Ground=Instantiate(Resources.Load("GroundPrefab")as GameObject,new Vector3(this.transform.parent.position.x+20,0,0),Quaternion.identity);
+				GameObject Ground=Instantiate(Resources.Load("GroundPrefab")as GameObject,new Vector3(this.transform.parent.position.x+20.2f,0,0),Quaternion.identity);
 					Ground.transform.parent=transform.parent.parent;
 		if(nameofObj=="10")
 		{

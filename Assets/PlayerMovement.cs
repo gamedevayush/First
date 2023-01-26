@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lp;   
     private float dragDistance; 
 	public float lfactor=1; 
+	public float speedfactor=1; 
 		float zaxis=0;
 		int count=0;
 		float xaxis=-18;
@@ -151,9 +152,22 @@ public class PlayerMovement : MonoBehaviour
 	{
 		Vector3 z=new Vector3(transform.position.x,transform.position.y,zaxis);
 		transform.position=Vector3.Lerp(transform.position,z,(8+(lfactor/10))*Time.deltaTime);
-		transform.Translate((lfactor/1000)+1.5f*Time.deltaTime,0,0);
+		transform.Translate((lfactor/1000)+1.5f*speedfactor*Time.deltaTime,0,0);
 	}
-
+	
+	public void SpeedUp()
+	{
+		if(speedfactor!=1.7f)
+		{
+		speedfactor=1.7f;
+		Invoke("DisableSpeed",5f);
+		}
+	}
+	
+	void DisableSpeed()
+	{
+		speedfactor=1;
+	}
 	IEnumerator CanMoveFunc()
 	{
 		CountDown.text = "3";
