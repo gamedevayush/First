@@ -5482,7 +5482,7 @@ MonoBehaviour:
   canMove: 0
 --- !u!95 &822872110
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5499,7 +5499,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!143 &822872111
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6348,7 +6348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -8379,9 +8378,9 @@ MonoBehaviour:
   newCoinsGetText: {fileID: 1388942536}
   newCoinsGetBox: {fileID: 1967333873}
   FreeAdsButton: {fileID: 1780830006}
-  BannerID: ca-app-pub-3940256099942544/6300978111
-  InterstitialID: ca-app-pub-3940256099942544/1033173712
-  RewardedId1: ca-app-pub-3940256099942544/5224354917
+  BannerID: ca-app-pub-2294561581875039/3106879603
+  InterstitialID: ca-app-pub-2294561581875039/1925111136
+  RewardedId1: ca-app-pub-2294561581875039/8478895280
 --- !u!4 &1275103228
 Transform:
   m_ObjectHideFlags: 0
@@ -13391,7 +13390,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &919132147505815901
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13408,7 +13407,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &967110679251641397
 GameObject:
   m_ObjectHideFlags: 0

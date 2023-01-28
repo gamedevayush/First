@@ -16,9 +16,9 @@ public class AdManagerScript : MonoBehaviour
     public GameObject FreeAdsButton; 
 
 	//public UnityEngine.UI.Text ErrorText;
-    public string BannerID="ca-app-pub-3940256099942544/6300978111";
-    public string InterstitialID="ca-app-pub-3940256099942544/1033173712";
-    public string RewardedId1 = "ca-app-pub-3940256099942544/5224354917";
+    public string BannerID= "ca-app-pub-2294561581875039/3106879603";
+    public string InterstitialID= "ca-app-pub-2294561581875039/1925111136";
+    public string RewardedId1 = "ca-app-pub-2294561581875039/8478895280";
 
 
 
