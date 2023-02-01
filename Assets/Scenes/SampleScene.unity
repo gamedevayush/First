@@ -8378,9 +8378,9 @@ MonoBehaviour:
   newCoinsGetText: {fileID: 1388942536}
   newCoinsGetBox: {fileID: 1967333873}
   FreeAdsButton: {fileID: 1780830006}
-  BannerID: ca-app-pub-2294561581875039/3106879603
-  InterstitialID: ca-app-pub-2294561581875039/1925111136
-  RewardedId1: ca-app-pub-2294561581875039/8478895280
+  BannerID: ca-app-pub-2235259183598940/2504276195
+  InterstitialID: ca-app-pub-2235259183598940/8687359403
+  RewardedId1: ca-app-pub-2235259183598940/8471736989
 --- !u!4 &1275103228
 Transform:
   m_ObjectHideFlags: 0
