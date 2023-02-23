@@ -24,10 +24,26 @@ public class PlayerMovement : MonoBehaviour
 		public UnityEngine.UI.Slider StageSlider;
 		public bool isPowered;
 		public bool canMove;
- 
-    void OnEnable()
+	private static PlayerMovement _instance;
+	public static PlayerMovement Instance { get { return _instance; } }
+
+
+	private void Awake()
+	{
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+		}
+		else
+		{
+			_instance = this;
+		}
+	}
+
+	void OnEnable()
     {
 		canMove = false;
+		GetComponent<CharacterController>().enabled = true;
 		StageSlider.value=0;
 		transform.position=new Vector3(-18.13f,0.1f,0);
 		PowerVFX.SetActive(false);
@@ -39,7 +55,11 @@ public class PlayerMovement : MonoBehaviour
 		lfactor=GameManager.Instance.CurrLevel;
 		StartCoroutine(CanMoveFunc());
     }
- 
+ public void UseMagnet()
+    {
+		transform.Find("Char").gameObject.GetComponent<BoxCollider>().enabled = true;
+		StartCoroutine(DisableMagnet());
+	}
  
  public void usePower()
 	{
@@ -210,10 +230,18 @@ public class PlayerMovement : MonoBehaviour
 	}
 	public void Die()
 	{
+		GetComponent<CharacterController>().enabled = false;
 		GameObject p=GameObject.Instantiate(DieParticles,this.transform);
 		p.transform.localScale=new Vector3(2,2,2);
 		transform.Find("Char").gameObject.SetActive(false);
 		Vibrator.Vibrate(1000);
+	}
+
+
+	IEnumerator DisableMagnet()
+	{
+		yield return new WaitForSeconds(10f);
+		transform.Find("Char").gameObject.GetComponent<BoxCollider>().enabled = false;
 	}
 	
 }

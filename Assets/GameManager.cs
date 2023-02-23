@@ -5,15 +5,15 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject MainMenuCamera;
-    public GameObject GameCamera;
+	public GameObject MainMenuCamera;
+	public GameObject GameCamera;
 	public GameObject moveScript;
 	public GameObject Ground;
 	public GameObject GroundMesh;
 	public SkinnedMeshRenderer playerSkin; //Variable Created By Ayusharma for Changing material on Skinned Mesh Renderer
 
 	public int CurrLevel;
-	public int CurrMat;	
+	public int CurrMat;
 	public int levelUnlocked;
 	public int coins;
 	public int power;
@@ -24,49 +24,55 @@ public class GameManager : MonoBehaviour
 
 	public AudioSource coinSound;
 	public GameObject PurchaseBox;
+	public GameObject FreeAdsButton;
 
-	
-	
+	public UnityEngine.UI.Text newCoinsGetText;
+	public GameObject newCoinsGetBox;
+
+
+
+
 	private static GameManager _instance;
-    public static GameManager Instance { get { return _instance; } }
+	public static GameManager Instance { get { return _instance; } }
 
 
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        } else {
-            _instance = this;
-        }
-    }
-    void Start()
-    {
+	private void Awake()
+	{
+		if (_instance != null && _instance != this)
+		{
+			Destroy(this.gameObject);
+		} else {
+			_instance = this;
+		}
+	}
+	void Start()
+	{
 		coinSound = GetComponent<AudioSource>();
 		LevelText.text = " ";
-		levelUnlocked =1;
-		canVibrate=true;
-		power=2;
-        MainMenuCamera.SetActive(true);
+		levelUnlocked = 1;
+		canVibrate = true;
+		power = 1;
+		MainMenuCamera.SetActive(true);
 		GameCamera.SetActive(false);
-		moveScript.GetComponent<PlayerMovement>().enabled=false;
+		moveScript.GetComponent<PlayerMovement>().enabled = false;
 		MenuManager.Instance.ChangeMenu("skinMenu");
 		MenuManager.Instance.ChangeMenu("mainmenu");
 		PostStart();
-    }
-	
+	}
+
 	void PostStart()
 	{
-		levelUnlocked=PlayerPrefs.GetInt("Level",1);
-		coins=PlayerPrefs.GetInt("Coins",0);
-		power=PlayerPrefs.GetInt("Power",2);
-		coinText.text=coins.ToString();
-		currentSkinNumber=PlayerPrefs.GetInt("SkinCurr",0);
-		
+		levelUnlocked = PlayerPrefs.GetInt("Level", 1);
+		coins = PlayerPrefs.GetInt("Coins", 0);
+		power = PlayerPrefs.GetInt("Power", 1);
+		coinText.text = coins.ToString();
+		currentSkinNumber = PlayerPrefs.GetInt("SkinCurr", 0);
+
 	}
+
+
 	
-	
-	
+
 	void SaveLevel(int data)
 	{
 		PlayerPrefs.SetInt("Level",data);

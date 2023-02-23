@@ -27,6 +27,7 @@ public class AnswerSender : MonoBehaviour
 				{
 					col.gameObject.GetComponent<PlayerMovement>().Die();
 					Invoke("GameOver",2f);
+					GetComponent<MeshRenderer>().enabled = false;
 				}
 			
 			

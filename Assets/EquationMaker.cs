@@ -5,8 +5,10 @@ using TMPro;
 
 public class EquationMaker : MonoBehaviour
 {
-    
-	
+
+	public GameObject Spikes1;
+	public GameObject Spikes2;
+	public GameObject Spikes3;
 	public TMP_Text ques;
 	public TMP_Text an1;
 	public TMP_Text an2;
@@ -27,7 +29,10 @@ public class EquationMaker : MonoBehaviour
 		
     void Start()
     {
-		lfactor=GameManager.Instance.CurrLevel;
+		Spikes1.SetActive(true);
+		Spikes2.SetActive(true);
+		Spikes3.SetActive(true);
+		lfactor =GameManager.Instance.CurrLevel;
 		if(lfactor>6)
 		{
 			lfactor=6;
@@ -66,7 +71,8 @@ public class EquationMaker : MonoBehaviour
 	   ran_ans_int=Random.Range(0,3);
 	   if(ran_ans_int==0) //S1
 	   {
-		   ans1=ans;
+			Spikes1.SetActive(false);
+			ans1 =ans;
 		   ans2 = ans +1;
 		   ans3 = ans -1;
 		   s1.GetComponent<AnswerSender>().Correcthai();
@@ -74,7 +80,8 @@ public class EquationMaker : MonoBehaviour
 	   }
 	   if(ran_ans_int==1) //S2
 	   {
-		   ans1 = ans+1;
+			Spikes2.SetActive(false);
+			ans1 = ans+1;
 		   ans2=ans;
 		   ans3=ans-1;
 		   s2.GetComponent<AnswerSender>().Correcthai();
@@ -82,7 +89,8 @@ public class EquationMaker : MonoBehaviour
 	   }
 	   if(ran_ans_int==2) //S3
 	   {
-		   ans1=ans +1 ;
+			Spikes3.SetActive(false);
+			ans1 =ans +1 ;
 		   ans2= ans -1;
 		   ans3=ans;
 		   s3.GetComponent<AnswerSender>().Correcthai();
