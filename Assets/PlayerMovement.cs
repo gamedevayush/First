@@ -5,7 +5,11 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+	public bool isDoublingCoins;
+	public bool isMagnetCoins;
 	public GameObject PowerVFX;
+	public GameObject MagnetObj;
+	public GameObject doubleObj;
 	public GameObject DieParticles;
 	public GameObject PickParticles;
     private Vector3 fp;   
@@ -42,7 +46,9 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnEnable()
     {
+		doubleObj.SetActive(false);
 		canMove = false;
+		MagnetObj.SetActive(false);
 		GetComponent<CharacterController>().enabled = true;
 		StageSlider.value=0;
 		transform.position=new Vector3(-18.13f,0.1f,0);
@@ -58,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
  public void UseMagnet()
     {
 		transform.Find("Char").gameObject.GetComponent<BoxCollider>().enabled = true;
+		MagnetObj.SetActive(true);
+		isMagnetCoins =true;
 		StartCoroutine(DisableMagnet());
 	}
  
@@ -241,9 +249,25 @@ public class PlayerMovement : MonoBehaviour
 	IEnumerator DisableMagnet()
 	{
 		yield return new WaitForSeconds(10f);
+		MagnetObj.SetActive(false);
+		isMagnetCoins = false;
 		transform.Find("Char").gameObject.GetComponent<BoxCollider>().enabled = false;
 	}
-	
+
+	public void Use2x()
+	{
+		doubleObj.SetActive(true);
+		isDoublingCoins = true;
+		StartCoroutine(Disable2x());
+	}
+
+
+	IEnumerator Disable2x()
+	{
+		yield return new WaitForSeconds(10f);
+		doubleObj.SetActive(false);
+		isDoublingCoins = false;
+	}
 }
 
 

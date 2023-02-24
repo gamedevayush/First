@@ -29,8 +29,34 @@ public class CoinGenerator : MonoBehaviour
             {
                 if (NoofCoins < 38)
                 {
-                    GameObject Coin=Instantiate(Resources.Load("Coin") as GameObject, new Vector3(this.transform.position.x + Feets, 0.07f, Posz),Quaternion.Euler(0,0,90f));
-                    Coin.transform.parent = this.transform;
+                    if (NoofCoins == 37)
+                    {
+                        int g = Random.Range(0, 2);
+                        if (g == 0)
+                        {
+                            if (PlayerMovement.Instance.isMagnetCoins == false)
+                            {
+                                GameObject Power = Instantiate(Resources.Load("Magnet") as GameObject, new Vector3(this.transform.position.x + Feets, 0.07f, Posz), Quaternion.Euler(0, 180f, 90f));
+                                Power.transform.parent = this.transform;
+                            }
+                        }
+                        else if (g == 1)
+                        {
+                            if (PlayerMovement.Instance.isDoublingCoins == false)
+                            {
+                                GameObject Power = Instantiate(Resources.Load("2xPower") as GameObject, new Vector3(this.transform.position.x + Feets, 0.07f, Posz), Quaternion.Euler(0, -900, 0));
+                                Power.transform.localScale = new Vector3(2, 60, 1);
+                                Power.transform.parent = this.transform;
+                            }
+                        }
+
+                    }
+                    else {
+                        GameObject Coin = Instantiate(Resources.Load("Coin") as GameObject, new Vector3(this.transform.position.x + Feets, 0.07f, Posz), Quaternion.Euler(0, 0, 90f));
+                        Coin.transform.parent = this.transform;
+                        Coin.name = NoofCoins.ToString();
+                    }
+                    
                     Feets = Feets + 0.5f;
                     NoofCoins++;
                 }

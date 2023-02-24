@@ -81,6 +81,7 @@ public class LevelManager : MonoBehaviour
 	public void Coin2x()
 	{
 		coinFactor = 2;
+		PlayerMovement.Instance.Use2x();
 		StartCoroutine(ResetFactor());
 	}
 

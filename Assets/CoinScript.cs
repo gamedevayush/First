@@ -26,6 +26,7 @@ public class CoinScript : MonoBehaviour
 		else if (col.tag == "PlayerCo")
 		{
 			Debug.Log("PoweredCoin");
+			StartCoroutine(LerptoPlayer());
 		}
 	}
 	IEnumerator LerpPosition()
@@ -35,6 +36,19 @@ public class CoinScript : MonoBehaviour
 		while (time < 0.5f)
 		{
 			transform.position = Vector3.Lerp(startPosition, new Vector3(transform.position.x, 5f, transform.position.z), time / 0.5f);
+			time += Time.deltaTime;
+			yield return null;
+		}
+		//transform.position = new Vector3(transform.position.x, 50, transform.position.z);
+	}
+
+	IEnumerator LerptoPlayer()
+	{
+		float time = 0;
+		Vector3 startPosition = transform.position;
+		while (time < 0.5f)
+		{
+			transform.position = Vector3.Lerp(startPosition, PlayerMovement.Instance.GetComponent<Transform>().transform.position, time / 0.5f);
 			time += Time.deltaTime;
 			yield return null;
 		}
